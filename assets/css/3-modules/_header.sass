@@ -1,0 +1,163 @@
+header
+  height: 100vh
+  width: 100%
+  background:
+    image: url('/assets/img/header-bg.jpg')
+    size: cover
+    repeat: no-repeat
+    position: center center
+
+  .menu
+    width: 1200px
+    margin: 0 auto
+    +clearfix
+
+    h2
+      margin:
+        top: 0
+      float: left
+      padding:
+        top: 30px
+      a
+        color: $white
+        transition: all 300ms ease-in-out
+        &:hover
+          color: darken($white, 10%)
+
+    nav
+      float: right
+      ul
+        padding:
+          top: 30px
+        list-style: none
+        li
+          float: left
+          margin:
+            left: 25px
+          a
+            color: $white
+            text-transform: uppercase
+            letter-spacing: 2px
+            font-weight: bold
+            transition: all 300ms ease-in-out
+            &:hover
+              color: $accent
+              box-shadow: 0 4px 0 $accent
+
+.punch
+  width: 1200px
+  margin: 0 auto
+
+  h1
+    text-align: center
+    color: $white
+    text-transform: uppercase
+    font-size: 120px
+    margin:
+      top: 20px
+      bottom: 40px
+
+  h3
+    text-align: center
+    color: $white
+    //margin-top: 100px
+    margin:
+      bottom: 20px
+    font-family: 'Pacifico', cursive
+    font-size: 72px
+
+.learn-more
+  display: block
+  margin: 0 auto
+
+  .line
+    +line
+    background-color: $white
+
+  .btn-learn-more
+    text-align: center
+    margin:
+      top: 60px
+
+    a
+      border: 4px solid $white
+      padding: 10px 20px
+      text-transform: uppercase
+      color: $white
+      font-weight: bold
+      letter-spacing: 1px
+      font-size: 12px
+      transition: all 300ms ease-in-out
+      &:hover
+        background-color: $white
+        color: $accent
+
+.page-nav
+  width: 1200px
+  height: auto
+  margin: 0 auto
+  +clearfix
+
+  nav
+    +position(absolute, null null 20px null)
+
+    ul
+      li
+        list-style: none
+        width: 280px
+        margin-right: 20px
+        float: left
+
+        span
+          width: 100%
+          height: 3px
+          background-color: transparentize($white, 0.5)
+          display: block
+          position: relative
+          transition: all 300ms ease-in-out
+          overflow: hidden
+          &::before
+            transition: all 300ms ease-in-out
+            content: ""
+            +position(absolute, 0 null null 0)
+            width: 50px
+            height: 3px
+            background-color: $main-color
+            transform: translateX(-50px)
+
+        a
+          font-size: 14px
+          color: transparentize($white, 0.5)
+          text-transform: uppercase
+          letter-spacing: 1px
+          transition: all 300ms ease-in-out
+          strong
+            font-size: 18px
+            color: transparentize($white, 0.5)
+            margin-right: 4px
+            font-weight: bold
+            transition: all 300ms ease-in-out
+
+        &:hover
+          cursor: pointer
+          span
+            background-color: $white
+            &::before
+              transform: translateX(0)
+
+          a
+            color: $white
+            strong
+              color: $white
+
+        &.active
+          cursor: pointer
+          span
+            background-color: $white
+            &::before
+              transform: translateX(0)
+
+          a
+            color: $white
+            strong
+              color: $white

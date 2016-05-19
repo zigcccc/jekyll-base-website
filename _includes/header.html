@@ -1,0 +1,35 @@
+<header>
+  <div class="menu">
+    <h2><a href="/index.html">MoGo</a></h2>
+    <nav>
+      <ul>
+        {% for item in site.data.settings.menu %}
+          <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="punch">
+    <h3>{{ site.data.settings.company }}</h3>
+    <h1>{{ site.data.settings.punch-line }}</h1>
+  </div>
+  <div class="learn-more">
+    <div class="line"></div>
+    <div class="btn-learn-more">
+      <a href="#">Learn more</a>
+    </div>
+  </div>
+  <div class="page-nav">
+    <nav>
+      <ul>
+          {% for item in site.data.settings.home-page-sections %}
+            <li>
+              <span></span>
+              <a href="{{ item.url }}"><strong>{{ item.number }}</strong>{{ item.name }}</a>
+            </li>
+          {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
+</header>

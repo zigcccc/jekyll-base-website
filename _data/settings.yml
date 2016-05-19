@@ -1,0 +1,25 @@
+#---------------------------------
+#General Site Settings
+
+title: Mogo Template Site
+company: Creative Template
+punch-line: Welcome to MoGo
+
+
+
+#---------------------------------
+#Main Menu
+menu:
+- {name: About, url: '#about-us'}
+- {name: Service, url: '#service'}
+- {name: Work, url: '#work'}
+- {name: Blog, url: '#blog'}
+- {name: Contact, url: '#contact'}
+
+#---------------------------------
+#Homepage Sections
+home-page-sections:
+  - {name: intro, url: '#intro', number: 1}
+  - {name: work, url: '#work-home', number: 2}
+  - {name: about, url: '#about', number: 3}
+  - {name: contacts, url: '#contacts', number: 4}
